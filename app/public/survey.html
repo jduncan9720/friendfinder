@@ -209,6 +209,8 @@
                 $("#q10").val()
                 ]
       };
+      var currentURL = window.location.origin
+      
       $.post("/api/friends", newFriend)
         .then(function (data) {
           console.log("add.html", data);
