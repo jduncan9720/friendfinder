@@ -1,5 +1,4 @@
 var express = require("express");
-var path = require("path");
 // var routes = require("./htmlRoutes.js");
 
 var app = express();
