@@ -209,11 +209,12 @@
                 $("#q10").val()
                 ]
       };
-      var currentURL = window.location.origin
-      
+      console.log(newFriend)
+
+
       $.post("/api/friends", newFriend)
         .then(function (data) {
-          console.log("add.html", data);
+          console.log(data);
           alert("Adding character...");
         });
     });
