@@ -1,6 +1,8 @@
 var friends = require("../data/friends");
 
 module.exports = function (app) {
+    var friendName = "";
+    var friendPhoto = "";
     //display all friends
     app.get("/api/friends", function (req, res) {
         return res.json(friends);
@@ -39,6 +41,8 @@ module.exports = function (app) {
         }
         //display person with id equal to personNumber+1
         console.log(friends[personNumber].name);
+        friendName += friends[personNumber].name;
+        friendPhoto += friends[personNumber].photo;
         
         console.log(newFriend);
 
