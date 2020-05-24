@@ -216,6 +216,10 @@
         .then(function (data) {
           console.log(data);
           alert("Adding character...");
+          $("#match-name").text(data.name);
+          $("#match-img").attr("src", data.photo);
+          $("#results-modal").modal("toggle");
+
         });
     });
   </script>

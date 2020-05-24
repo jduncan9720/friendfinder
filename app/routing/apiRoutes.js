@@ -11,20 +11,35 @@ module.exports = function (app) {
         console.log("posting...")
         var newFriend = req.body;
 
-        var newScore = function(array){
-            var newScore = [];
-            for (var i = 0; i < array.length; i++){
-                newScore.push(parseInt(array[i]));
+        var getTotalDifferencesForAllFriends = function () {
+            var totalDifferences = [];
+            var newfriendscores = newFriend.scores;
+            for (var i = 0; i < friends.length; i++) {
+                var currenttotaldifference = 0;
+                var currentFriend = friends[i];
+                for (var j = 0; j < currentFriend.scores.length; j++) {
+                    //All friends have scores array length 10
+                    var newFriendCurrentScore = newfriendscores[j];
+                    var currentFriendsCurrentScore = currentFriend.scores[j];
+                    currenttotaldifference += Math.abs(newFriendCurrentScore - currentFriendsCurrentScore);
+                }
+                totalDifferences.push(currenttotaldifference);
             }
-            return newScore
+            return totalDifferences;
         }
 
-
-
-        // Using a RegEx Pattern to remove spaces from newCharacter
-        // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-        newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
-
+        var friendsVsNewScore = getTotalDifferencesForAllFriends();
+        var currentLow = 100;
+        var personNumber = -1;
+        for (var i = 0; i < friendsVsNewScore.length; i++) {
+            if (friendsVsNewScore[i] < currentLow) {
+                currentLow = friendsVsNewScore[i];
+                personNumber = i;
+            }
+        }
+        //display person with id equal to personNumber+1
+        console.log(friends[personNumber].name);
+        
         console.log(newFriend);
 
         friends.push(newFriend);
