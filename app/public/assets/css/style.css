@@ -3,7 +3,17 @@ body{
     background-size: 100%;
     background-attachment: fixed;
 }
-
-h4, h3, h2 {
+h1, h4, h3{
     font-family: 'Chelsea Market', cursive;
+}
+
+h2 {
+    font-family: 'Chelsea Market', cursive;
+    color: rgb(255, 255, 255);
+}
+#mainsurvey{
+    background-color: moccasin;
+}
+a{
+    color: white;
 }
