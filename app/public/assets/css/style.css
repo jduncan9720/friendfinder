@@ -1,4 +1,9 @@
+body{
+    background-image: url("../images/hillbillyhouse.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
 
-h4 {
-    font-family: 'Times New Roman', Times, serif;
+h4, h3, h2 {
+    font-family: 'Chelsea Market', cursive;
 }
