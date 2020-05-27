@@ -19,7 +19,7 @@ var friends = [
     {
         id: "2",
         name: "Mickey",
-        photo: "https://i.pinimg.com/564x/d4/31/60/d43160eee4b57289f8745d23d0d1e586.jpg",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRQAY5hn0TrIZMzzFmcxOCz_QB68Yvl0DiLKhoT2eziCb1vEkou&usqp=CAU",
         scores: [
             5,
             4,
