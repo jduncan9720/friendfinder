@@ -4,16 +4,16 @@ var friends = [
         name: "John",
         photo: "https://i.pinimg.com/564x/d4/31/60/d43160eee4b57289f8745d23d0d1e586.jpg",
         scores: [
-            5,
+            1,
             4,
-            6,
+            4,
             4,
             1,
-            7,
+            3,
             2,
-            6,
+            4,
             1,
-            9
+            2
         ]
     },
     {
@@ -26,11 +26,11 @@ var friends = [
             3,
             4,
             1,
-            8,
+            5,
             2,
             5,
             3,
-            9
+            4
         ] 
     }
 ];
